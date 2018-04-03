@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\RamenRepository")
  * @ORM\Table(name="ramen")
  */
 class Ramen
@@ -38,28 +39,9 @@ class Ramen
     private $ingrediants;
 
     /**
-     * @ORM\Column(type="string", length 100)
+     * @ORM\Column(type="string", length=100)
      */
     private $pricerange;
-
-    /**
-     * Ramen constructor.
-     * @param $id
-     * @param $name
-     * @param $photo
-     * @param $description
-     * @param $ingrediants
-     * @param $pricerange
-     */
-    public function __construct($id, $name, $photo, $description, $ingrediants, $pricerange)
-    {
-        $this->id = $id;
-        $this->name = $name;
-        $this->photo = $photo;
-        $this->description = $description;
-        $this->ingrediants = $ingrediants;
-        $this->pricerange = $pricerange;
-    }
 
 
     /**
@@ -157,6 +139,5 @@ class Ramen
     {
         $this->pricerange = $pricerange;
     }
-
 
 }

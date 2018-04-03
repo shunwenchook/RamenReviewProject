@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Ramen;
-use App\Form\RamenType;
+use App\Entity\Review;
+use App\Form\ReviewType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,9 +11,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * @Route("/ramen", name="ramen_")
+ * @Route("/review", name="review_")
  */
-class RamenController extends Controller
+class ReviewController extends Controller
 {
     /**
      * @Route("/", name="index")
@@ -22,11 +22,11 @@ class RamenController extends Controller
      */
     public function index()
     {
-        $ramens = $this->getDoctrine()
-            ->getRepository(Ramen::class)
+        $reviews = $this->getDoctrine()
+            ->getRepository(Review::class)
             ->findAll();
 
-        return $this->render('ramen/index.html.twig', ['ramens' => $ramens]);
+        return $this->render('review/index.html.twig', ['reviews' => $reviews]);
     }
 
     /**
@@ -35,20 +35,20 @@ class RamenController extends Controller
      */
     public function new(Request $request)
     {
-        $raman = new Ramen();
-        $form = $this->createForm(RamenType::class, $raman);
+        $review = new Review();
+        $form = $this->createForm(ReviewType::class, $review);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($raman);
+            $em->persist($review);
             $em->flush();
 
-            return $this->redirectToRoute('ramen_edit', ['id' => $raman->getId()]);
+            return $this->redirectToRoute('review_edit', ['id' => $review->getId()]);
         }
 
-        return $this->render('ramen/new.html.twig', [
-            'raman' => $raman,
+        return $this->render('review/new.html.twig', [
+            'review' => $review,
             'form' => $form->createView(),
         ]);
     }
@@ -57,10 +57,10 @@ class RamenController extends Controller
      * @Route("/{id}", name="show")
      * @Method("GET")
      */
-    public function show(Ramen $raman)
+    public function show(Review $review)
     {
-        return $this->render('ramen/show.html.twig', [
-            'raman' => $raman,
+        return $this->render('review/show.html.twig', [
+            'review' => $review,
         ]);
     }
 
@@ -68,19 +68,19 @@ class RamenController extends Controller
      * @Route("/{id}/edit", name="edit")
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, Ramen $raman)
+    public function edit(Request $request, Review $review)
     {
-        $form = $this->createForm(RamenType::class, $raman);
+        $form = $this->createForm(ReviewType::class, $review);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('ramen_edit', ['id' => $raman->getId()]);
+            return $this->redirectToRoute('review_edit', ['id' => $review->getId()]);
         }
 
-        return $this->render('ramen/edit.html.twig', [
-            'raman' => $raman,
+        return $this->render('review/edit.html.twig', [
+            'review' => $review,
             'form' => $form->createView(),
         ]);
     }
@@ -89,16 +89,16 @@ class RamenController extends Controller
      * @Route("/{id}", name="delete")
      * @Method("DELETE")
      */
-    public function delete(Request $request, Ramen $raman)
+    public function delete(Request $request, Review $review)
     {
-        if (!$this->isCsrfTokenValid('delete'.$raman->getId(), $request->request->get('_token'))) {
-            return $this->redirectToRoute('ramen_index');
+        if (!$this->isCsrfTokenValid('delete'.$review->getId(), $request->request->get('_token'))) {
+            return $this->redirectToRoute('review_index');
         }
 
         $em = $this->getDoctrine()->getManager();
-        $em->remove($raman);
+        $em->remove($review);
         $em->flush();
 
-        return $this->redirectToRoute('ramen_index');
+        return $this->redirectToRoute('review_index');
     }
 }

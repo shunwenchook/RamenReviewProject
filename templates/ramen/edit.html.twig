@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Ramen{% endblock %}
+
+{% block body %}
+
+    <h1>Edit Ramen</h1>
+
+    {% include 'ramen/_form.html.twig' with {'form': form, 'button_label': 'Edit'} only %}
+
+    <a href="{{ path('ramen_index') }}">back to list</a>
+
+    {% include 'ramen/_delete_form.html.twig' with {'identifier': raman.id} only %}
+
+{% endblock %}

@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Ramen;
-use App\Form\RamenType;
+use App\Entity\User;
+use App\Form\UserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -11,9 +11,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * @Route("/ramen", name="ramen_")
+ * @Route("/user", name="user_")
  */
-class RamenController extends Controller
+class UserController extends Controller
 {
     /**
      * @Route("/", name="index")
@@ -22,11 +22,11 @@ class RamenController extends Controller
      */
     public function index()
     {
-        $ramens = $this->getDoctrine()
-            ->getRepository(Ramen::class)
+        $users = $this->getDoctrine()
+            ->getRepository(User::class)
             ->findAll();
 
-        return $this->render('ramen/index.html.twig', ['ramens' => $ramens]);
+        return $this->render('user/index.html.twig', ['users' => $users]);
     }
 
     /**
@@ -35,20 +35,20 @@ class RamenController extends Controller
      */
     public function new(Request $request)
     {
-        $raman = new Ramen();
-        $form = $this->createForm(RamenType::class, $raman);
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($raman);
+            $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('ramen_edit', ['id' => $raman->getId()]);
+            return $this->redirectToRoute('user_edit', ['id' => $user->getId()]);
         }
 
-        return $this->render('ramen/new.html.twig', [
-            'raman' => $raman,
+        return $this->render('user/new.html.twig', [
+            'user' => $user,
             'form' => $form->createView(),
         ]);
     }
@@ -57,10 +57,10 @@ class RamenController extends Controller
      * @Route("/{id}", name="show")
      * @Method("GET")
      */
-    public function show(Ramen $raman)
+    public function show(User $user)
     {
-        return $this->render('ramen/show.html.twig', [
-            'raman' => $raman,
+        return $this->render('user/show.html.twig', [
+            'user' => $user,
         ]);
     }
 
@@ -68,19 +68,19 @@ class RamenController extends Controller
      * @Route("/{id}/edit", name="edit")
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, Ramen $raman)
+    public function edit(Request $request, User $user)
     {
-        $form = $this->createForm(RamenType::class, $raman);
+        $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('ramen_edit', ['id' => $raman->getId()]);
+            return $this->redirectToRoute('user_edit', ['id' => $user->getId()]);
         }
 
-        return $this->render('ramen/edit.html.twig', [
-            'raman' => $raman,
+        return $this->render('user/edit.html.twig', [
+            'user' => $user,
             'form' => $form->createView(),
         ]);
     }
@@ -89,16 +89,16 @@ class RamenController extends Controller
      * @Route("/{id}", name="delete")
      * @Method("DELETE")
      */
-    public function delete(Request $request, Ramen $raman)
+    public function delete(Request $request, User $user)
     {
-        if (!$this->isCsrfTokenValid('delete'.$raman->getId(), $request->request->get('_token'))) {
-            return $this->redirectToRoute('ramen_index');
+        if (!$this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
+            return $this->redirectToRoute('user_index');
         }
 
         $em = $this->getDoctrine()->getManager();
-        $em->remove($raman);
+        $em->remove($user);
         $em->flush();
 
-        return $this->redirectToRoute('ramen_index');
+        return $this->redirectToRoute('user_index');
     }
 }

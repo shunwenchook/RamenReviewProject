@@ -1,9 +1,43 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}Ramen{% endblock %}
+
 {% block body %}
-    <h1>Ramen SHOW page</h1>
-    <p>
-        id = {{ ramen.id }}
-        <br>
-        name = {{ ramen.name }} {{ ramen.photo }}
-    </p>
+
+    <h1>Ramen</h1>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <td>{{ raman.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ raman.name }}</td>
+        </tr>
+        <tr>
+            <th>Photo</th>
+            <td>{{ raman.photo }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ raman.description }}</td>
+        </tr>
+        <tr>
+            <th>Ingrediants</th>
+            <td>{{ raman.ingrediants }}</td>
+        </tr>
+        <tr>
+            <th>Pricerange</th>
+            <td>{{ raman.pricerange }}</td>
+        </tr>
+
+    </table>
+
+    <a href="{{ path('ramen_index') }}">back to list</a>
+
+    <a href="{{ path('ramen_edit', {'id': raman.id}) }}">edit</a>
+
+    {% include 'ramen/_delete_form.html.twig' with {'identifier': raman.id} only %}
+
 {% endblock %}
