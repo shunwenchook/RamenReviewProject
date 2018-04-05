@@ -20,8 +20,11 @@
             <td>{{ user.password }}</td>
         </tr>
         <tr>
-            <th>Role</th>
-            <td>{{ user.role }}</td>
+            <th>Roles</th>
+            <td>{% for role in user.roles %}
+                    {{ role }},
+                {% endfor %}
+            </td>
         </tr>
 
     </table>

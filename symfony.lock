@@ -170,6 +170,9 @@
     "symfony/event-dispatcher": {
         "version": "v4.0.6"
     },
+    "symfony/expression-language": {
+        "version": "v3.4.7"
+    },
     "symfony/filesystem": {
         "version": "v4.0.6"
     },
@@ -275,8 +278,14 @@
             "ref": "cda8b550123383d25827705d05a42acf6819fe4e"
         }
     },
-    "symfony/security-core": {
-        "version": "v3.4.7"
+    "symfony/security-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "f8a63faa0d9521526499c0a8f403c9964ecb0527"
+        }
     },
     "symfony/security-csrf": {
         "version": "v3.4.7"
