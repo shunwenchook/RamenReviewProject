@@ -52,6 +52,12 @@ class Review
     private $public;
 
     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Ramen", inversedBy="reviews")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $ramen;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -179,6 +185,16 @@ class Review
         $this->public = $public;
     }
 
+
+    public function getRamen(): ?Ramen
+    {
+        return $this->ramen;
+    }
+
+    public function setRamen(Ramen $ramen = null)
+    {
+        $this->ramen = $ramen;
+    }
 
 
 }

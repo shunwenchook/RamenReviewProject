@@ -35,7 +35,6 @@ class RamenController extends Controller
      */
     public function new(Request $request)
     {
-
         $raman = new Ramen();
         $form = $this->createForm(RamenType::class, $raman);
         $form->handleRequest($request);
@@ -102,5 +101,4 @@ class RamenController extends Controller
 
         return $this->redirectToRoute('ramen_index');
     }
-
 }

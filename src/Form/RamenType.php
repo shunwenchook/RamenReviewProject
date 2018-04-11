@@ -17,6 +17,7 @@ class RamenType extends AbstractType
             ->add('description')
             ->add('ingrediants')
             ->add('pricerange')
+            ->add('score')
         ;
     }
 

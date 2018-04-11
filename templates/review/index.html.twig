@@ -16,6 +16,7 @@
                 <th>Stars</th>
                 <th>Photo</th>
                 <th>Public</th>
+                <th>Ramen</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                 <td>{{ review.stars }}</td>
                 <td>{{ review.photo }}</td>
                 <td>{{ review.public ? 'Yes' : 'No' }}</td>
+                <td>{{ review.ramen.name  }}</td>
                 <td>
                     <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
                     <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>

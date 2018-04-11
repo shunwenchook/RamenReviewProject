@@ -3,6 +3,9 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 
 /**
  * @ORM\Entity
@@ -43,6 +46,22 @@ class Ramen
      */
     private $pricerange;
 
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $score;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="ramen")
+     */
+    private $reviews;
+
+
+    public function __construct()
+    {
+        $this->reviews = new ArrayCollection();
+    }
 
     /**
      * @return mixed
@@ -138,6 +157,30 @@ class Ramen
     public function setPricerange($pricerange)
     {
         $this->pricerange = $pricerange;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+
+    /**
+     * @param mixed $score
+     */
+    public function setScore($score)
+    {
+        $this->score = $score;
+    }
+
+    /**
+     * @return Collection|Review[]
+     */
+    public function getReviews()
+    {
+        return $this->reviews;
     }
 
 }
