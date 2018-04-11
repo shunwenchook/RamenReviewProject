@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Ramen;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,7 +17,15 @@ class RamenType extends AbstractType
             ->add('photo')
             ->add('description')
             ->add('ingrediants')
-            ->add('pricerange')
+            ->add('pricerange', ChoiceType::class, [
+                'choices' => [
+                    'under 5'=>'under 5',
+                    '6 - 9'=>'6 - 9',
+                    '10 - 14'=>'10 - 14',
+                    '15 - 19'=>'15 - 19',
+                    '20 - 39'=>'20 - 39',
+                ]
+            ])
             ->add('score')
         ;
     }
