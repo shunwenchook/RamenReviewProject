@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * @Route("/user", name="user_")
@@ -33,17 +34,20 @@ class UserController extends Controller
      * @Route("/new", name="new")
      * @Method({"GET", "POST"})
      */
-    public function new(Request $request)
+    public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
-        dump($user);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            dump($em);
+
+            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($password);
+
             $em->persist($user);
 
             $em->flush();
@@ -72,12 +76,15 @@ class UserController extends Controller
      * @Route("/{id}/edit", name="edit")
      * @Method({"GET", "POST"})
      */
-    public function edit(Request $request, User $user)
+    public function edit(Request $request, User $user , UserPasswordEncoderInterface $passwordEncoder)
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $password = $passwordEncoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($password);
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('user_edit', ['id' => $user->getId()]);
