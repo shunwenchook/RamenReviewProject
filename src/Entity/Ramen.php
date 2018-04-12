@@ -48,19 +48,35 @@ class Ramen
 
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $score;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="ramen")
      */
     private $reviews;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="ramens")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $public;
 
 
     public function __construct()
     {
         $this->reviews = new ArrayCollection();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
     }
 
     /**
@@ -159,21 +175,6 @@ class Ramen
         $this->pricerange = $pricerange;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getScore()
-    {
-        return $this->score;
-    }
-
-    /**
-     * @param mixed $score
-     */
-    public function setScore($score)
-    {
-        $this->score = $score;
-    }
 
     /**
      * @return Collection|Review[]
@@ -182,5 +183,23 @@ class Ramen
     {
         return $this->reviews;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param mixed $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
+
+
 
 }

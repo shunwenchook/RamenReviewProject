@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -33,6 +35,40 @@ class User implements UserInterface, \Serializable
     private $roles;
 
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="user")
+     */
+    private $reviews;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ramen", mappedBy="user")
+     */
+    private $ramens;
+
+
+
+
+    public function __construct()
+    {
+        $this->reviews = new ArrayCollection();
+        $this->ramens = new ArrayCollection();
+    }
+
+    /**
+     * @return Collection|Review[]
+     */
+    public function getReview()
+    {
+        return $this->reviews;
+    }
+
+    /**
+     * @return Collection|Ramen[]
+     */
+    public function getRamen()
+    {
+        return $this->ramens;
+    }
 
     /**
      * @return mixed
@@ -130,6 +166,9 @@ class User implements UserInterface, \Serializable
             $this->password,
             ) = unserialize($serialized);
     }
+
+
+
 
 
 

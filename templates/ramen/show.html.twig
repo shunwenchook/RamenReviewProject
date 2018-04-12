@@ -24,16 +24,20 @@
             <td>{{ raman.description }}</td>
         </tr>
         <tr>
-            <th>Ingrediants</th>
+            <th>Ingredients</th>
             <td>{{ raman.ingrediants }}</td>
         </tr>
         <tr>
-            <th>Pricerange</th>
+            <th>Price Range</th>
             <td>{{ raman.pricerange }}</td>
         </tr>
         <tr>
-            <th>Score</th>
-            <td>{{ raman.score }}</td>
+            <th>Added By</th>
+            <td>{{ raman.user.username }}</td>
+        </tr>
+        <tr>
+            <th>Public</th>
+            <td>{{ raman.public ? 'Yes' : 'No'}}</td>
         </tr>
 
     </table>

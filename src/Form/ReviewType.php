@@ -12,7 +12,6 @@ class ReviewType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
         $builder
             ->add('summary')
             ->add('date')
@@ -25,6 +24,7 @@ class ReviewType extends AbstractType
                 'class' => 'App:Ramen',
                 'choice_label'=>'name',
             ])
+            ->add('user')
         ;
     }
 

@@ -58,6 +58,13 @@ class Review
     private $ramen;
 
     /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="reviews")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $user;
+
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -196,5 +203,15 @@ class Review
         $this->ramen = $ramen;
     }
 
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
 
 }

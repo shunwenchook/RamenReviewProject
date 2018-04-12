@@ -14,7 +14,8 @@
                 <th>Description</th>
                 <th>Ingrediants</th>
                 <th>Pricerange</th>
-                <th>Score</th>
+                <th>Added by</th>
+                <th>Public</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -27,7 +28,8 @@
                 <td>{{ raman.description }}</td>
                 <td>{{ raman.ingrediants }}</td>
                 <td>{{ raman.pricerange }}</td>
-                <td>{{ raman.score }}</td>
+                <td> {{ raman.user.username }}</td>
+                <td>{{ raman.public? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ path('ramen_show', {'id': raman.id}) }}">show</a>
                     <a href="{{ path('ramen_edit', {'id': raman.id}) }}">edit</a>
@@ -35,7 +37,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>

@@ -11,6 +11,11 @@
             <th>Id</th>
             <td>{{ review.id }}</td>
         </tr>
+
+        <tr>
+            <th>Ramen</th>
+            <td>{{ review.ramen.name }}</td>
+        </tr>
         <tr>
             <th>Summary</th>
             <td>{{ review.summary }}</td>
@@ -38,10 +43,6 @@
         <tr>
             <th>Public</th>
             <td>{{ review.public ? 'Yes' : 'No' }}</td>
-        </tr>
-        <tr>
-            <th>Ramen</th>
-            <td>{{ review.ramen.name }}</td>
         </tr>
 
     </table>
