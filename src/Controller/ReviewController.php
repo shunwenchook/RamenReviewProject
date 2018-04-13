@@ -161,7 +161,6 @@ class ReviewController extends Controller
     public function showPublic(Review $review)
     {
 
-
         return $this->render('review/publicshow.html.twig', [
             'review' => $review,
 

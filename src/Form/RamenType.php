@@ -28,10 +28,10 @@ class RamenType extends AbstractType
                     '20 - 39'=>'20 - 39',
                 ]
             ])
-            ->add('user', EntityType::class,[
-                'class' => 'App:User',
-                'choice_label'=>'username',
-            ])
+//            ->add('user', EntityType::class,[
+//                'class' => 'App:User',
+//                'choice_label'=>'username',
+//            ])
         ;
     }
 

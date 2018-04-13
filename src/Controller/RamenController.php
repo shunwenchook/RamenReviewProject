@@ -46,9 +46,13 @@ class RamenController extends Controller
         $raman = new Ramen();
         $form = $this->createForm(RamenType::class, $raman);
         $form->handleRequest($request);
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $raman->setUser($user);
+
             $em->persist($raman);
             $em->flush();
 
@@ -109,4 +113,7 @@ class RamenController extends Controller
 
         return $this->redirectToRoute('ramen_index');
     }
+
+
+
 }

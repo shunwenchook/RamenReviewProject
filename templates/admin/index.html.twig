@@ -1,8 +1,132 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello {{ controller_name }}!{% endblock %}
-
 {% block body %}
     <h1> Admin home </h1>
+
+    <h2>User list</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Roles</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>{% for role in user.roles %}
+                        {{ role }},
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('user_new') }}">Create new User</a>
+
+    <h2>Ramen list</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Description</th>
+            <th>Ingrediants</th>
+            <th>Pricerange</th>
+            <th>Added by</th>
+            <th>Public</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for raman in ramens %}
+            <tr>
+                <td>{{ raman.id }}</td>
+                <td>{{ raman.name }}</td>
+                <td>{{ raman.photo }}</td>
+                <td>{{ raman.description }}</td>
+                <td>{{ raman.ingrediants }}</td>
+                <td>{{ raman.pricerange }}</td>
+                <td> {{ raman.user.username }}</td>
+                <td>{{ raman.public? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('ramen_show', {'id': raman.id}) }}">show</a>
+                    <a href="{{ path('ramen_edit', {'id': raman.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('ramen_new') }}">Create new Ramen</a>
+
+    <h2>Review list</h2>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ramen </th>
+            <th>Summary</th>
+            <th>Date</th>
+            <th>Shopname</th>
+            <th>Price</th>
+            <th>Stars</th>
+            <th>Photo</th>
+            <th>Reviewed By</th>
+            <th>Public</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        {% for review in reviews %}
+
+
+                <tr>
+                    <td>{{ review.id }}</td>
+                    <td>{{ review.ramen.name }}</td>
+                    <td>{{ review.summary }}</td>
+                    <td>{{ review.date ? review.date|date('Y-m-d') : '' }}</td>
+                    <td>{{ review.shopname }}</td>
+                    <td>{{ review.price }}</td>
+                    <td>{{ review.stars }}</td>
+                    <td>{{ review.photo }}</td>
+                    <td>{{ review.user.username }}</td>
+                    <td>{{ review.public ? 'Yes' : 'No' }}</td>
+                    <td>
+                        <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
+                        <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>
+                    </td>
+                </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <a href="{{ path('review_new') }}">Create new Review</a>
 
 {% endblock %}

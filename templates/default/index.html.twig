@@ -6,6 +6,7 @@
     <h2> Ramen list</h2>
     <hr>
     {% for ramen in ramens %}
+        {% if ramen.public %}
 
         <h3> {{ ramen.name }}</h3>
         <p> {{ ramen.description }}</p>
@@ -40,7 +41,7 @@
         {% endif %}
 
         <hr>
-
+        {% endif %}
     {% endfor %}
 
 {% endblock %}
