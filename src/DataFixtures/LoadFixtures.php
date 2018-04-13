@@ -58,10 +58,10 @@ class LoadFixtures extends Fixture {
         $manager->persist($ramen6);
 
         // Create review objects
-        $review1 = $this->createReview($ramen1, $userUser, 'Brilliant, I love these noodles and they are so good value for money, but not available many places, thanks so much!', new \DateTime(), 'John\'s', '3', '3.5', 'maggi1.jpg', '1' );
-        $review2 = $this->createReview($ramen3, $userUser, 'I had several kind of instant noodle since I was in college, but this Mie sedaap is the best of all the instant noodle, especially the Mie Sedaap Mie Goreng & Mi Sedaap Onion Chicken.', new \DateTime(), 'Sean\'s', '1', '4.5', 'misedap2.jpg', '1' );
-        $review3 = $this->createReview($ramen3, $userShun, 'Tastes great and is delicious.', new \DateTime(), 'Mark\'s', '1', '5', 'misedap3', '1' );
-        $review4 = $this->createReview($ramen6, $userShun, 'Worth the money', new \DateTime(), 'Ken\'s', '1', '3.0', 'xiao2.jpg', '0' );
+        $review1 = $this->createReview($ramen1, $userUser, 'Brilliant, I love these noodles and they are so good value for money, but not available many places, thanks so much!', new \DateTime(), 'John\'s', '3', '35', 'maggi1.jpg', '1' );
+        $review2 = $this->createReview($ramen3, $userUser, 'I had several kind of instant noodle since I was in college, but this Mie sedaap is the best of all the instant noodle, especially the Mie Sedaap Mie Goreng & Mi Sedaap Onion Chicken.', new \DateTime(), 'Sean\'s', '1', '45', 'misedap2.jpg', '1' );
+        $review3 = $this->createReview($ramen3, $userShun, 'Tastes great and is delicious.', new \DateTime(), 'Mark\'s', '1', '50', 'misedap3.jpg', '1' );
+        $review4 = $this->createReview($ramen6, $userShun, 'Worth the money', new \DateTime(), 'Ken\'s', '1', '30', 'xiao2.jpg', '0' );
 
         $manager->persist($review1);
         $manager->persist($review2);
