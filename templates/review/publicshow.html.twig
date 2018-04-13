@@ -33,15 +33,16 @@
         </tr>
         <tr>
             <th>Price</th>
-            <td>{{ review.price }}</td>
+            <td>{{ review.price }} &euro;</td>
         </tr>
         <tr>
             <th>Stars</th>
-            <td>{{ review.stars }}</td>
+            <td><span class="rating-static rating-{{ review.stars }}"></span></td>
+            {#<td>{{ review.stars }}</td>#}
         </tr>
         <tr>
             <th>Photo</th>
-            <td>{{ review.photo }}</td>
+            <td><img class="items" src="/images/{{ review.photo }}" alt="{{ review.photo }}"></td>
         </tr>
 
 
