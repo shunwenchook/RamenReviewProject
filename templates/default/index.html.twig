@@ -23,12 +23,22 @@
         <p>
             {{ ramen.photo }}
         </p>
+        <p>
+        Reviews:
+            {% for review in reviews %}
+                {% if review.ramen.id == ramen.id %}
+                    <a href="{{ url('review_show_public', {'id':review.id }) }}"> review</a>
+                {% endif %}
+            {% endfor %}
+         </p>
 
-        {% for review in reviews %}
-            {% if review.ramen.id == ramen.id %}
-                <a href="{{ url('review_show', {'id':review.id }) }}"> review</a>
-            {% endif %}
-        {% endfor %}
+        {% if is_granted('ROLE_USER') %}
+            <p>
+                <a href="{{ url('review_user', {'ramen_id':ramen.id, 'user_id':13}) }}"> Add Review</a>
+
+            </p>
+        {% endif %}
+
         <hr>
 
     {% endfor %}

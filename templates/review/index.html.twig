@@ -5,23 +5,31 @@
 {% block body %}
 
     <h1>Review index</h1>
+
+
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th> Ramen </th>
+                <th>Ramen </th>
                 <th>Summary</th>
                 <th>Date</th>
                 <th>Shopname</th>
                 <th>Price</th>
                 <th>Stars</th>
                 <th>Photo</th>
+                <th>Reviewed By</th>
                 <th>Public</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
+
+
         {% for review in reviews %}
+
+            {% if review.user.id == user.id or user.roles[0] == "ROLE_ADMIN" %}
+
             <tr>
                 <td>{{ review.id }}</td>
                 <td>{{ review.ramen.name }}</td>
@@ -31,17 +39,20 @@
                 <td>{{ review.price }}</td>
                 <td>{{ review.stars }}</td>
                 <td>{{ review.photo }}</td>
+                <td>{{ review.user.username }}</td>
                 <td>{{ review.public ? 'Yes' : 'No' }}</td>
                 <td>
                     <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
                     <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>
                 </td>
             </tr>
+            {% endif %}
         {% else %}
             <tr>
                 <td colspan="9">no records found</td>
             </tr>
         {% endfor %}
+
         </tbody>
     </table>
     <a href="{{ path('review_new') }}">Create new</a>

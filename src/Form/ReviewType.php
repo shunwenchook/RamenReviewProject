@@ -20,11 +20,14 @@ class ReviewType extends AbstractType
             ->add('stars')
             ->add('photo')
             ->add('public')
-            ->add('ramen', EntityType::class, [
-                'class' => 'App:Ramen',
-                'choice_label'=>'name',
-            ])
-            ->add('user')
+//            ->add('ramen', EntityType::class, [
+//                'class' => 'App:Ramen',
+//                'choice_label'=>'name',
+//            ])
+//            ->add('user', EntityType::class, [
+//                'class' => 'App:User',
+//                'choice_label'=>'username',
+//            ])
         ;
     }
 

@@ -6,12 +6,14 @@ use App\Entity\Ramen;
 use App\Form\RamenType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @Route("/ramen", name="ramen_")
+ * @Security("has_role('ROLE_USER')")
  */
 class RamenController extends Controller
 {
@@ -22,11 +24,17 @@ class RamenController extends Controller
      */
     public function index()
     {
+
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
         $ramens = $this->getDoctrine()
             ->getRepository(Ramen::class)
             ->findAll();
 
-        return $this->render('ramen/index.html.twig', ['ramens' => $ramens]);
+        return $this->render('ramen/index.html.twig', [
+            'ramens' => $ramens,
+            'user' => $user,
+        ]);
     }
 
     /**

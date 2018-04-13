@@ -128,9 +128,6 @@
     "symfony/cache": {
         "version": "v4.0.6"
     },
-    "symfony/class-loader": {
-        "version": "v3.4.7"
-    },
     "symfony/config": {
         "version": "v4.0.6"
     },
@@ -251,13 +248,13 @@
             "ref": "41416370e732d1c8e7a0953a5ce815b641cfba0f"
         }
     },
-    "symfony/polyfill-apcu": {
-        "version": "v1.7.0"
-    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.7.0"
     },
     "symfony/polyfill-mbstring": {
+        "version": "v1.7.0"
+    },
+    "symfony/polyfill-php72": {
         "version": "v1.7.0"
     },
     "symfony/process": {

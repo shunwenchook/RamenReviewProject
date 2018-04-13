@@ -21,6 +21,7 @@
         </thead>
         <tbody>
         {% for raman in ramens %}
+            {% if raman.user.id == user.id or user.roles[0] == "ROLE_ADMIN" %}
             <tr>
                 <td>{{ raman.id }}</td>
                 <td>{{ raman.name }}</td>
@@ -35,6 +36,7 @@
                     <a href="{{ path('ramen_edit', {'id': raman.id}) }}">edit</a>
                 </td>
             </tr>
+            {% endif %}
         {% else %}
             <tr>
                 <td colspan="7">no records found</td>
