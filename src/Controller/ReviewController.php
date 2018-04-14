@@ -1,4 +1,7 @@
 <?php
+/**
+ * Summary comment
+ */
 
 namespace App\Controller;
 

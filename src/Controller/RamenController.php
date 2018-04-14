@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Summary comment
+ */
 namespace App\Controller;
 
 use App\Entity\Ramen;

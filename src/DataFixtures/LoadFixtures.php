@@ -40,7 +40,14 @@ class LoadFixtures extends Fixture {
         }
 
         // create ramen objects
-        $ramen1 = $this->createRamen('Maggi Mee', 'maggi1.jpg', 'You know it’s popular when people start referring to instant noodles as Maggie Mee. A staple in every Singaporean household, Maggi noodles taste great and have an equally attractive package to match.', 'Salt, Flavour Enhancers (Monosodium Glutamate, Disodium Guanylate, Disodium Inosinate), Sugar,', '5 - 10', $userUser, '1');
+        $ramen1 = $this->createRamen('Maggi Mee',
+                                    'maggi1.jpg',
+                                    'You know it’s popular when people start referring to instant noodles as Maggie Mee. A staple in every Singaporean household, Maggi noodles taste great and have an equally attractive package to match.',
+                                    'Salt, Flavour Enhancers (Monosodium Glutamate, Disodium Guanylate, Disodium Inosinate), Sugar,',
+                                    '5 - 10',
+                                    $userUser, // ignore
+                                    '1');
+
         $ramen2 = $this->createRamen('Indomee', 'indo.jpg', 'Once you try these you won\'t want to buy any other brand', 'Salt, Sugar, Flavour Enhancers (621, 631, 627), Garlic Powder, Onion Powder, Yeast Extract, Artificial Flavour, Pepper, Anti Caking Agent', '5 - 11', $userShun, '1');
         $ramen3 = $this->createRamen('Mi Sedap', 'misedap1.jpg', 'The best brand of mi gorengs. Delicious and tasty', 'Goreng Kriuk (90gr) – revolutionized fried noodle enjoyment comes with deliciously “kriuk-kriuk” crunchy fried onion.', '15 - 20', $userShun, '1');
         $ramen4 = $this->createRamen('Paldo Budae Jigae Ramyun', 'paldo.jpg', 'The broth is really good – a little thicker than most and has a kind of ‘been boiling with hot dogs in it all day’ kind of thing going on.', 'Deep spicy Budae Jjigae boilde with lots of solid ingredinets like chewy, sticky noodles, ham, sausage, meat gamish, kimchi, green onion,', '5 - 8', $userUser, '0');
@@ -58,7 +65,16 @@ class LoadFixtures extends Fixture {
         $manager->persist($ramen6);
 
         // Create review objects
-        $review1 = $this->createReview($ramen1, $userUser, 'Brilliant, I love these noodles and they are so good value for money, but not available many places, thanks so much!', new \DateTime(), 'John\'s', '3', '35', 'maggi1.jpg', '1' );
+        $review1 = $this->createReview($ramen1, // ignore
+                                        $userUser, // ignore
+                                        'Brilliant, I love these noodles and they are so good value for money, but not available many places, thanks so much!',
+                                        new \DateTime(), // ignore
+                                        'John\'s',
+                                        '3',
+                                        '35',
+                                        'maggi1.jpg',
+                                        '1' );
+
         $review2 = $this->createReview($ramen3, $userUser, 'I had several kind of instant noodle since I was in college, but this Mie sedaap is the best of all the instant noodle, especially the Mie Sedaap Mie Goreng & Mi Sedaap Onion Chicken.', new \DateTime(), 'Sean\'s', '1', '45', 'misedap2.jpg', '1' );
         $review3 = $this->createReview($ramen3, $userShun, 'Tastes great and is delicious.', new \DateTime(), 'Mark\'s', '1', '50', 'misedap3.jpg', '1' );
         $review4 = $this->createReview($ramen6, $userShun, 'Worth the money', new \DateTime(), 'Ken\'s', '1', '30', 'xiao2.jpg', '0' );

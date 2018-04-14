@@ -1,31 +1,37 @@
 <?php
-
+/**
+ * Summary comment
+ */
 namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\HttpFoundation\Request;
-
-use App\Entity\User;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-
+/**
+ * Class SecurityController
+ * @package App\Controller
+ */
 class SecurityController extends Controller
 {
 
-
     /**
-     * @var UserPasswordEncoderInterface
+     * SecurityController constructor.
+     * @param UserPasswordEncoderInterface $encoder
      */
-    private $encoder;
-
     public function __construct(UserPasswordEncoderInterface $encoder)
     {
         $this->encoder = $encoder;
     }
 
+
     /**
+     * Login method
+     * @param Request $request
+     * @param AuthenticationUtils $authUtils
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/login", name="login")
      */
     public function login(Request $request, AuthenticationUtils $authUtils)

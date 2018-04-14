@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Summary comment
+ */
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -8,11 +10,13 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
+ * User entity
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
 {
     /**
+     * ID
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -20,34 +24,39 @@ class User implements UserInterface, \Serializable
     private $id;
 
     /**
+     * Username
      * @ORM\Column(type="string")
      */
     private $username;
 
     /**
+     * Password
      * @ORM\Column(type="string")
      */
     private $password;
 
     /**
+     * Roles
      * @ORM\Column(type="json_array")
      */
     private $roles;
 
 
     /**
+     * Reviews
      * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="user")
      */
     private $reviews;
 
     /**
+     * Ramens
      * @ORM\OneToMany(targetEntity="App\Entity\Ramen", mappedBy="user")
      */
     private $ramens;
 
-
-
-
+    /**
+     * User constructor.
+     */
     public function __construct()
     {
         $this->reviews = new ArrayCollection();
@@ -55,6 +64,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * Returns Review
      * @return Collection|Review[]
      */
     public function getReview()
@@ -63,6 +73,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * Returns Ramen
      * @return Collection|Ramen[]
      */
     public function getRamen()
@@ -71,6 +82,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * returns ID
      * @return mixed
      */
     public function getId()
@@ -79,6 +91,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * sets ID
      * @param mixed $id
      */
     public function setId($id)
@@ -87,6 +100,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * returns Username
      * @return mixed
      */
     public function getUsername()
@@ -95,6 +109,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * sets Username
      * @param mixed $username
      */
     public function setUsername($username)
@@ -103,6 +118,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * gets password
      * @return mixed
      */
     public function getPassword()
@@ -111,6 +127,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * sets password
      * @param mixed $password
      */
     public function setPassword($password)
@@ -119,6 +136,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * returns roles
      * @return mixed
      */
     public function getRoles()
@@ -127,7 +145,9 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * sets roles
      * @param mixed $roles
+     * @return mixed
      */
     public function setRoles($roles)
     {
@@ -136,18 +156,27 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-
-
+    /**
+     * gets salt
+     * @return null
+     */
     public function getSalt()
     {
         return null;
     }
+
+    /**
+     * erase credentials
+     */
     public function eraseCredentials()
     {
 
     }
 
-    /** @see \Serializable::serialize() */
+    /**
+     * Serialize method
+     * @see \Serializable::serialize()
+     * */
     public function serialize()
     {
         return serialize(array(
@@ -157,7 +186,11 @@ class User implements UserInterface, \Serializable
         ));
     }
 
-    /** @see \Serializable::unserialize() */
+    /**
+     * Unserialize method
+     * @param string $serialized
+     * @see \Serializable::unserialize()
+     */
     public function unserialize($serialized)
     {
         list (

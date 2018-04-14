@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Summary comment
+ */
 namespace App\Controller;
 
 use App\Entity\Ramen;
@@ -9,9 +11,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class AdminController
+ * @package App\Controller
+ */
 class AdminController extends Controller
 {
     /**
+     * Admin index method which displays the admin panel
      * @Route("/admin", name="admin")
      * @Security("has_role('ROLE_ADMIN')")
      */
