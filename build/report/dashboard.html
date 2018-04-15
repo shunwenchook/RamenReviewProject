@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\Users\swcho\Desktop\SymfonyProject\RamenReview\src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src=".js/html5shiv.min.js"></script>
+  <script src=".js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">C:\Users\swcho\Desktop\SymfonyProject\RamenReview\src</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/AdminController.php.html#18">App\Controller\AdminController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151011.php.html#11">DoctrineMigrations\Version20180403151011</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#15">App\Repository\UserRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180413195347.php.html#11">DoctrineMigrations\Version20180413195347</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005738.php.html#11">DoctrineMigrations\Version20180412005738</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005108.php.html#11">DoctrineMigrations\Version20180412005108</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412003100.php.html#11">DoctrineMigrations\Version20180412003100</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411222640.php.html#11">DoctrineMigrations\Version20180411222640</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411174624.php.html#11">DoctrineMigrations\Version20180411174624</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411161155.php.html#11">DoctrineMigrations\Version20180411161155</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180404164738.php.html#11">DoctrineMigrations\Version20180404164738</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403162228.php.html#11">DoctrineMigrations\Version20180403162228</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151102.php.html#11">DoctrineMigrations\Version20180403151102</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403114424.php.html#11">DoctrineMigrations\Version20180403114424</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#21">App\Controller\RamenController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#11">App\Form\UserType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ReviewType.php.html#11">App\Form\ReviewType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RamenType.php.html#12">App\Form\RamenType</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#16">App\Entity\User</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#13">App\DataFixtures\LoadFixtures</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#19">App\Controller\UserController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#17">App\Controller\SecurityController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#23">App\Controller\ReviewController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#12">App\Entity\Review</a></td><td class="text-right">6%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#17">App\Entity\Ramen</a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="Security/AccessDeniedHandler.php.html#11">App\Security\AccessDeniedHandler</a></td><td class="text-right">37%</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">76%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/Review.php.html#12">App\Entity\Review</a></td><td class="text-right">415</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#23">App\Controller\ReviewController</a></td><td class="text-right">210</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#17">App\Entity\Ramen</a></td><td class="text-right">165</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#21">App\Controller\RamenController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#19">App\Controller\UserController</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#13">App\DataFixtures\LoadFixtures</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Kernel.php.html#12">App\Kernel</a></td><td class="text-right">8</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/AdminController.php.html#25"><abbr title="App\Controller\AdminController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#152"><abbr title="App\Entity\User::setRoles">setRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#32"><abbr title="App\Form\UserType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/UserType.php.html#13"><abbr title="App\Form\UserType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ReviewType.php.html#34"><abbr title="App\Form\ReviewType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/ReviewType.php.html#13"><abbr title="App\Form\ReviewType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RamenType.php.html#38"><abbr title="App\Form\RamenType::configureOptions">configureOptions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Form/RamenType.php.html#14"><abbr title="App\Form\RamenType::buildForm">buildForm</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#194"><abbr title="App\Entity\User::unserialize">unserialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#180"><abbr title="App\Entity\User::serialize">serialize</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#171"><abbr title="App\Entity\User::eraseCredentials">eraseCredentials</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#163"><abbr title="App\Entity\User::getSalt">getSalt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#142"><abbr title="App\Entity\User::getRoles">getRoles</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403114424.php.html#13"><abbr title="DoctrineMigrations\Version20180403114424::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#133"><abbr title="App\Entity\User::setPassword">setPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#124"><abbr title="App\Entity\User::getPassword">getPassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#115"><abbr title="App\Entity\User::setUsername">setUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#106"><abbr title="App\Entity\User::getUsername">getUsername</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#97"><abbr title="App\Entity\User::setId">setId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#88"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#79"><abbr title="App\Entity\User::getRamen">getRamen</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#70"><abbr title="App\Entity\User::getReview">getReview</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#60"><abbr title="App\Entity\User::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#214"><abbr title="App\Entity\Review::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Kernel.php.html#53"><abbr title="App\Kernel::configureRoutes">configureRoutes</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403114424.php.html#21"><abbr title="DoctrineMigrations\Version20180403114424::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#203"><abbr title="App\Entity\Review::setRamen">setRamen</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411222640.php.html#13"><abbr title="DoctrineMigrations\Version20180411222640::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#17"><abbr title="App\Repository\UserRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180413195347.php.html#26"><abbr title="DoctrineMigrations\Version20180413195347::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180413195347.php.html#13"><abbr title="DoctrineMigrations\Version20180413195347::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005738.php.html#22"><abbr title="DoctrineMigrations\Version20180412005738::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005738.php.html#13"><abbr title="DoctrineMigrations\Version20180412005738::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005108.php.html#21"><abbr title="DoctrineMigrations\Version20180412005108::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412005108.php.html#13"><abbr title="DoctrineMigrations\Version20180412005108::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412003100.php.html#21"><abbr title="DoctrineMigrations\Version20180412003100::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180412003100.php.html#13"><abbr title="DoctrineMigrations\Version20180412003100::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411222640.php.html#26"><abbr title="DoctrineMigrations\Version20180411222640::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411174624.php.html#23"><abbr title="DoctrineMigrations\Version20180411174624::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151011.php.html#13"><abbr title="DoctrineMigrations\Version20180403151011::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411174624.php.html#13"><abbr title="DoctrineMigrations\Version20180411174624::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411161155.php.html#23"><abbr title="DoctrineMigrations\Version20180411161155::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180411161155.php.html#13"><abbr title="DoctrineMigrations\Version20180411161155::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180404164738.php.html#21"><abbr title="DoctrineMigrations\Version20180404164738::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180404164738.php.html#13"><abbr title="DoctrineMigrations\Version20180404164738::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403162228.php.html#21"><abbr title="DoctrineMigrations\Version20180403162228::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403162228.php.html#13"><abbr title="DoctrineMigrations\Version20180403162228::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151102.php.html#21"><abbr title="DoctrineMigrations\Version20180403151102::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151102.php.html#13"><abbr title="DoctrineMigrations\Version20180403151102::up">up</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Migrations/Version20180403151011.php.html#21"><abbr title="DoctrineMigrations\Version20180403151011::down">down</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#209"><abbr title="App\Entity\Review::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#192"><abbr title="App\Entity\Review::setPublic">setPublic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#28"><abbr title="App\Controller\RamenController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#24"><abbr title="App\Controller\SecurityController::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#111"><abbr title="App\DataFixtures\LoadFixtures::encodePassword">encodePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#97"><abbr title="App\DataFixtures\LoadFixtures::createUser">createUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#24"><abbr title="App\DataFixtures\LoadFixtures::load">load</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#19"><abbr title="App\DataFixtures\LoadFixtures::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#105"><abbr title="App\Controller\UserController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#81"><abbr title="App\Controller\UserController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#70"><abbr title="App\Controller\UserController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#39"><abbr title="App\Controller\UserController::new">new</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#26"><abbr title="App\Controller\UserController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#37"><abbr title="App\Controller\SecurityController::login">login</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#164"><abbr title="App\Controller\ReviewController::showPublic">showPublic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#132"><abbr title="App\DataFixtures\LoadFixtures::createReview">createReview</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#127"><abbr title="App\Controller\ReviewController::userReview">userReview</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#110"><abbr title="App\Controller\ReviewController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#89"><abbr title="App\Controller\ReviewController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#73"><abbr title="App\Controller\ReviewController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#49"><abbr title="App\Controller\ReviewController::new">new</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#30"><abbr title="App\Controller\ReviewController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#107"><abbr title="App\Controller\RamenController::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#86"><abbr title="App\Controller\RamenController::edit">edit</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#75"><abbr title="App\Controller\RamenController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#47"><abbr title="App\Controller\RamenController::new">new</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#118"><abbr title="App\DataFixtures\LoadFixtures::createRamen">createRamen</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#69"><abbr title="App\Entity\Ramen::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#184"><abbr title="App\Entity\Review::getPublic">getPublic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#96"><abbr title="App\Entity\Review::setSummary">setSummary</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#176"><abbr title="App\Entity\Review::setPhoto">setPhoto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#168"><abbr title="App\Entity\Review::getPhoto">getPhoto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#160"><abbr title="App\Entity\Review::setStars">setStars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#152"><abbr title="App\Entity\Review::getStars">getStars</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#144"><abbr title="App\Entity\Review::setPrice">setPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#136"><abbr title="App\Entity\Review::getPrice">getPrice</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#128"><abbr title="App\Entity\Review::setShopname">setShopname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#120"><abbr title="App\Entity\Review::getShopname">getShopname</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#112"><abbr title="App\Entity\Review::setDate">setDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#104"><abbr title="App\Entity\Review::getDate">getDate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#88"><abbr title="App\Entity\Review::getSummary">getSummary</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#74"><abbr title="App\Entity\Ramen::getUser">getUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Review.php.html#80"><abbr title="App\Entity\Review::setId">setId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#200"><abbr title="App\Entity\Ramen::setPublic">setPublic</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#184"><abbr title="App\Entity\Ramen::getReviews">getReviews</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#175"><abbr title="App\Entity\Ramen::setPricerange">setPricerange</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#159"><abbr title="App\Entity\Ramen::setIngrediants">setIngrediants</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#143"><abbr title="App\Entity\Ramen::setDescription">setDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#127"><abbr title="App\Entity\Ramen::setPhoto">setPhoto</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#111"><abbr title="App\Entity\Ramen::setName">setName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#95"><abbr title="App\Entity\Ramen::setId">setId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#79"><abbr title="App\Entity\Ramen::setUser">setUser</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Security/AccessDeniedHandler.php.html#23"><abbr title="App\Security\AccessDeniedHandler::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/RamenController.php.html#47"><abbr title="App\Controller\RamenController::new">new</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#86"><abbr title="App\Controller\RamenController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#49"><abbr title="App\Controller\ReviewController::new">new</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#89"><abbr title="App\Controller\ReviewController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#127"><abbr title="App\Controller\ReviewController::userReview">userReview</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#39"><abbr title="App\Controller\UserController::new">new</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#81"><abbr title="App\Controller\UserController::edit">edit</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Controller/RamenController.php.html#107"><abbr title="App\Controller\RamenController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/ReviewController.php.html#110"><abbr title="App\Controller\ReviewController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Controller/UserController.php.html#105"><abbr title="App\Controller\UserController::delete">delete</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="DataFixtures/LoadFixtures.php.html#24"><abbr title="App\DataFixtures\LoadFixtures::load">load</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Ramen.php.html#74"><abbr title="App\Entity\Ramen::getUser">getUser</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Review.php.html#209"><abbr title="App\Entity\Review::getUser">getUser</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 5.3.2</a> using <a href="https://secure.php.net/" target="_top">PHP 7.2.1</a> with <a href="https://xdebug.org/">Xdebug 2.6.0</a> and <a href="https://phpunit.de/">PHPUnit 6.5.8</a> at Sun Apr 15 0:41:11 UTC 2018.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/bootstrap.min.js" type="text/javascript"></script>
+  <script src=".js/holder.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([23,1,0,1,1,0,0,0,1,0,0,3], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([103,0,0,0,0,0,0,0,0,0,0,17], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Controller\/AdminController.php.html#18\">App\\Controller\\AdminController<\/a>"],[100,1,"<a href=\"Controller\/DefaultController.php.html#16\">App\\Controller\\DefaultController<\/a>"],[0,10,"<a href=\"Controller\/RamenController.php.html#21\">App\\Controller\\RamenController<\/a>"],[0,14,"<a href=\"Controller\/ReviewController.php.html#23\">App\\Controller\\ReviewController<\/a>"],[0,2,"<a href=\"Controller\/SecurityController.php.html#17\">App\\Controller\\SecurityController<\/a>"],[0,10,"<a href=\"Controller\/UserController.php.html#19\">App\\Controller\\UserController<\/a>"],[0,7,"<a href=\"DataFixtures\/LoadFixtures.php.html#13\">App\\DataFixtures\\LoadFixtures<\/a>"],[25.925925925925924,19,"<a href=\"Entity\/Ramen.php.html#17\">App\\Entity\\Ramen<\/a>"],[6.666666666666667,22,"<a href=\"Entity\/Review.php.html#12\">App\\Entity\\Review<\/a>"],[0,15,"<a href=\"Entity\/User.php.html#16\">App\\Entity\\User<\/a>"],[0,2,"<a href=\"Form\/RamenType.php.html#12\">App\\Form\\RamenType<\/a>"],[0,2,"<a href=\"Form\/ReviewType.php.html#11\">App\\Form\\ReviewType<\/a>"],[0,2,"<a href=\"Form\/UserType.php.html#11\">App\\Form\\UserType<\/a>"],[76.19047619047619,8,"<a href=\"Kernel.php.html#12\">App\\Kernel<\/a>"],[0,2,"<a href=\"Migrations\/Version20180403114424.php.html#11\">DoctrineMigrations\\Version20180403114424<\/a>"],[0,2,"<a href=\"Migrations\/Version20180403151011.php.html#11\">DoctrineMigrations\\Version20180403151011<\/a>"],[0,2,"<a href=\"Migrations\/Version20180403151102.php.html#11\">DoctrineMigrations\\Version20180403151102<\/a>"],[0,2,"<a href=\"Migrations\/Version20180403162228.php.html#11\">DoctrineMigrations\\Version20180403162228<\/a>"],[0,2,"<a href=\"Migrations\/Version20180404164738.php.html#11\">DoctrineMigrations\\Version20180404164738<\/a>"],[0,2,"<a href=\"Migrations\/Version20180411161155.php.html#11\">DoctrineMigrations\\Version20180411161155<\/a>"],[0,2,"<a href=\"Migrations\/Version20180411174624.php.html#11\">DoctrineMigrations\\Version20180411174624<\/a>"],[0,2,"<a href=\"Migrations\/Version20180411222640.php.html#11\">DoctrineMigrations\\Version20180411222640<\/a>"],[0,2,"<a href=\"Migrations\/Version20180412003100.php.html#11\">DoctrineMigrations\\Version20180412003100<\/a>"],[0,2,"<a href=\"Migrations\/Version20180412005108.php.html#11\">DoctrineMigrations\\Version20180412005108<\/a>"],[0,2,"<a href=\"Migrations\/Version20180412005738.php.html#11\">DoctrineMigrations\\Version20180412005738<\/a>"],[0,2,"<a href=\"Migrations\/Version20180413195347.php.html#11\">DoctrineMigrations\\Version20180413195347<\/a>"],[100,1,"<a href=\"Repository\/RamenRepository.php.html#8\">App\\Repository\\RamenRepository<\/a>"],[100,1,"<a href=\"Repository\/ReviewRepository.php.html#15\">App\\Repository\\ReviewRepository<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#15\">App\\Repository\\UserRepository<\/a>"],[37.5,2,"<a href=\"Security\/AccessDeniedHandler.php.html#11\">App\\Security\\AccessDeniedHandler<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Controller\/AdminController.php.html#25\">App\\Controller\\AdminController::index<\/a>"],[100,1,"<a href=\"Controller\/DefaultController.php.html#22\">App\\Controller\\DefaultController::index<\/a>"],[0,1,"<a href=\"Controller\/RamenController.php.html#28\">App\\Controller\\RamenController::index<\/a>"],[0,3,"<a href=\"Controller\/RamenController.php.html#47\">App\\Controller\\RamenController::new<\/a>"],[0,1,"<a href=\"Controller\/RamenController.php.html#75\">App\\Controller\\RamenController::show<\/a>"],[0,3,"<a href=\"Controller\/RamenController.php.html#86\">App\\Controller\\RamenController::edit<\/a>"],[0,2,"<a href=\"Controller\/RamenController.php.html#107\">App\\Controller\\RamenController::delete<\/a>"],[0,1,"<a href=\"Controller\/ReviewController.php.html#30\">App\\Controller\\ReviewController::index<\/a>"],[0,3,"<a href=\"Controller\/ReviewController.php.html#49\">App\\Controller\\ReviewController::new<\/a>"],[0,1,"<a href=\"Controller\/ReviewController.php.html#73\">App\\Controller\\ReviewController::show<\/a>"],[0,3,"<a href=\"Controller\/ReviewController.php.html#89\">App\\Controller\\ReviewController::edit<\/a>"],[0,2,"<a href=\"Controller\/ReviewController.php.html#110\">App\\Controller\\ReviewController::delete<\/a>"],[0,3,"<a href=\"Controller\/ReviewController.php.html#127\">App\\Controller\\ReviewController::userReview<\/a>"],[0,1,"<a href=\"Controller\/ReviewController.php.html#164\">App\\Controller\\ReviewController::showPublic<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#24\">App\\Controller\\SecurityController::__construct<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#37\">App\\Controller\\SecurityController::login<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#26\">App\\Controller\\UserController::index<\/a>"],[0,3,"<a href=\"Controller\/UserController.php.html#39\">App\\Controller\\UserController::new<\/a>"],[0,1,"<a href=\"Controller\/UserController.php.html#70\">App\\Controller\\UserController::show<\/a>"],[0,3,"<a href=\"Controller\/UserController.php.html#81\">App\\Controller\\UserController::edit<\/a>"],[0,2,"<a href=\"Controller\/UserController.php.html#105\">App\\Controller\\UserController::delete<\/a>"],[0,1,"<a href=\"DataFixtures\/LoadFixtures.php.html#19\">App\\DataFixtures\\LoadFixtures::__construct<\/a>"],[0,2,"<a href=\"DataFixtures\/LoadFixtures.php.html#24\">App\\DataFixtures\\LoadFixtures::load<\/a>"],[0,1,"<a href=\"DataFixtures\/LoadFixtures.php.html#97\">App\\DataFixtures\\LoadFixtures::createUser<\/a>"],[0,1,"<a href=\"DataFixtures\/LoadFixtures.php.html#111\">App\\DataFixtures\\LoadFixtures::encodePassword<\/a>"],[0,1,"<a href=\"DataFixtures\/LoadFixtures.php.html#118\">App\\DataFixtures\\LoadFixtures::createRamen<\/a>"],[0,1,"<a href=\"DataFixtures\/LoadFixtures.php.html#132\">App\\DataFixtures\\LoadFixtures::createReview<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#69\">App\\Entity\\Ramen::__construct<\/a>"],[0,2,"<a href=\"Entity\/Ramen.php.html#74\">App\\Entity\\Ramen::getUser<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#79\">App\\Entity\\Ramen::setUser<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#87\">App\\Entity\\Ramen::getId<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#95\">App\\Entity\\Ramen::setId<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#103\">App\\Entity\\Ramen::getName<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#111\">App\\Entity\\Ramen::setName<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#119\">App\\Entity\\Ramen::getPhoto<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#127\">App\\Entity\\Ramen::setPhoto<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#135\">App\\Entity\\Ramen::getDescription<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#143\">App\\Entity\\Ramen::setDescription<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#151\">App\\Entity\\Ramen::getIngrediants<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#159\">App\\Entity\\Ramen::setIngrediants<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#167\">App\\Entity\\Ramen::getPricerange<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#175\">App\\Entity\\Ramen::setPricerange<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#184\">App\\Entity\\Ramen::getReviews<\/a>"],[100,1,"<a href=\"Entity\/Ramen.php.html#192\">App\\Entity\\Ramen::getPublic<\/a>"],[0,1,"<a href=\"Entity\/Ramen.php.html#200\">App\\Entity\\Ramen::setPublic<\/a>"],[100,1,"<a href=\"Entity\/Review.php.html#72\">App\\Entity\\Review::getId<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#80\">App\\Entity\\Review::setId<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#88\">App\\Entity\\Review::getSummary<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#96\">App\\Entity\\Review::setSummary<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#104\">App\\Entity\\Review::getDate<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#112\">App\\Entity\\Review::setDate<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#120\">App\\Entity\\Review::getShopname<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#128\">App\\Entity\\Review::setShopname<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#136\">App\\Entity\\Review::getPrice<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#144\">App\\Entity\\Review::setPrice<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#152\">App\\Entity\\Review::getStars<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#160\">App\\Entity\\Review::setStars<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#168\">App\\Entity\\Review::getPhoto<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#176\">App\\Entity\\Review::setPhoto<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#184\">App\\Entity\\Review::getPublic<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#192\">App\\Entity\\Review::setPublic<\/a>"],[100,2,"<a href=\"Entity\/Review.php.html#198\">App\\Entity\\Review::getRamen<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#203\">App\\Entity\\Review::setRamen<\/a>"],[0,2,"<a href=\"Entity\/Review.php.html#209\">App\\Entity\\Review::getUser<\/a>"],[0,1,"<a href=\"Entity\/Review.php.html#214\">App\\Entity\\Review::setUser<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#60\">App\\Entity\\User::__construct<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#70\">App\\Entity\\User::getReview<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#79\">App\\Entity\\User::getRamen<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#88\">App\\Entity\\User::getId<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#97\">App\\Entity\\User::setId<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#106\">App\\Entity\\User::getUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#115\">App\\Entity\\User::setUsername<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#124\">App\\Entity\\User::getPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#133\">App\\Entity\\User::setPassword<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#142\">App\\Entity\\User::getRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#152\">App\\Entity\\User::setRoles<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#163\">App\\Entity\\User::getSalt<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#171\">App\\Entity\\User::eraseCredentials<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#180\">App\\Entity\\User::serialize<\/a>"],[0,1,"<a href=\"Entity\/User.php.html#194\">App\\Entity\\User::unserialize<\/a>"],[0,1,"<a href=\"Form\/RamenType.php.html#14\">App\\Form\\RamenType::buildForm<\/a>"],[0,1,"<a href=\"Form\/RamenType.php.html#38\">App\\Form\\RamenType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/ReviewType.php.html#13\">App\\Form\\ReviewType::buildForm<\/a>"],[0,1,"<a href=\"Form\/ReviewType.php.html#34\">App\\Form\\ReviewType::configureOptions<\/a>"],[0,1,"<a href=\"Form\/UserType.php.html#13\">App\\Form\\UserType::buildForm<\/a>"],[0,1,"<a href=\"Form\/UserType.php.html#32\">App\\Form\\UserType::configureOptions<\/a>"],[100,1,"<a href=\"Kernel.php.html#18\">App\\Kernel::getCacheDir<\/a>"],[100,1,"<a href=\"Kernel.php.html#23\">App\\Kernel::getLogDir<\/a>"],[100,4,"<a href=\"Kernel.php.html#28\">App\\Kernel::registerBundles<\/a>"],[100,1,"<a href=\"Kernel.php.html#38\">App\\Kernel::configureContainer<\/a>"],[0,1,"<a href=\"Kernel.php.html#53\">App\\Kernel::configureRoutes<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403114424.php.html#13\">DoctrineMigrations\\Version20180403114424::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403114424.php.html#21\">DoctrineMigrations\\Version20180403114424::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403151011.php.html#13\">DoctrineMigrations\\Version20180403151011::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403151011.php.html#21\">DoctrineMigrations\\Version20180403151011::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403151102.php.html#13\">DoctrineMigrations\\Version20180403151102::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403151102.php.html#21\">DoctrineMigrations\\Version20180403151102::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403162228.php.html#13\">DoctrineMigrations\\Version20180403162228::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180403162228.php.html#21\">DoctrineMigrations\\Version20180403162228::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180404164738.php.html#13\">DoctrineMigrations\\Version20180404164738::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180404164738.php.html#21\">DoctrineMigrations\\Version20180404164738::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411161155.php.html#13\">DoctrineMigrations\\Version20180411161155::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411161155.php.html#23\">DoctrineMigrations\\Version20180411161155::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411174624.php.html#13\">DoctrineMigrations\\Version20180411174624::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411174624.php.html#23\">DoctrineMigrations\\Version20180411174624::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411222640.php.html#13\">DoctrineMigrations\\Version20180411222640::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180411222640.php.html#26\">DoctrineMigrations\\Version20180411222640::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412003100.php.html#13\">DoctrineMigrations\\Version20180412003100::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412003100.php.html#21\">DoctrineMigrations\\Version20180412003100::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412005108.php.html#13\">DoctrineMigrations\\Version20180412005108::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412005108.php.html#21\">DoctrineMigrations\\Version20180412005108::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412005738.php.html#13\">DoctrineMigrations\\Version20180412005738::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180412005738.php.html#22\">DoctrineMigrations\\Version20180412005738::down<\/a>"],[0,1,"<a href=\"Migrations\/Version20180413195347.php.html#13\">DoctrineMigrations\\Version20180413195347::up<\/a>"],[0,1,"<a href=\"Migrations\/Version20180413195347.php.html#26\">DoctrineMigrations\\Version20180413195347::down<\/a>"],[100,1,"<a href=\"Repository\/RamenRepository.php.html#16\">App\\Repository\\RamenRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/ReviewRepository.php.html#17\">App\\Repository\\ReviewRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/UserRepository.php.html#17\">App\\Repository\\UserRepository::__construct<\/a>"],[100,1,"<a href=\"Security\/AccessDeniedHandler.php.html#17\">App\\Security\\AccessDeniedHandler::__construct<\/a>"],[0,1,"<a href=\"Security\/AccessDeniedHandler.php.html#23\">App\\Security\\AccessDeniedHandler::handle<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

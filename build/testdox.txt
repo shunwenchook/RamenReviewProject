@@ -1,0 +1,3 @@
+App\Tests\Controller\DefaultController
+ [x] Home page status okay
+

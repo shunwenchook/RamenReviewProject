@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="29.031566">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="C:\Users\swcho\Desktop\SymfonyProject\RamenReview\tests\ControllerTests\DefaultControllerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="29.031566">
+      <testcase name="testHomePageStatusOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="C:\Users\swcho\Desktop\SymfonyProject\RamenReview\tests\ControllerTests\DefaultControllerTest.php" line="10" assertions="1" time="29.031566"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
